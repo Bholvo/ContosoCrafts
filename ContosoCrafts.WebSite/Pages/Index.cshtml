@@ -1,0 +1,36 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Contoso Craft</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<div class="card-columns">
+    @foreach (var products in Model.Products)
+    {
+        @*@<h3>@products.Id</h3>
+            <h3>@products.Maker</h3>*@
+        
+        <div class="card">
+
+            <div class="card-img" style="background-image:url('@products.Image');"></div>
+            <div class="card-body">
+                <h5 class="card-title">@products.Title</h5>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        // <h4 style="background-color:aquamarine;border-radius:10px 10px;border-block-color:aqua;margin:10px;padding:15px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">@products.Description</h4>
+    }
+
+</div>
