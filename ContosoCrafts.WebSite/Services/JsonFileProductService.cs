@@ -30,7 +30,7 @@ namespace ContosoCrafts.WebSite.Services
                 return JsonSerializer.Deserialize<Product[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
                     {
-                        PropertyNameCaseInsensitive = false
+                        PropertyNameCaseInsensitive = true
                     });
             }
         }
